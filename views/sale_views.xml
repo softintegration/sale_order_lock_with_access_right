@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="view_sales_order_auto_done_setting_inherited" model="ir.ui.view">
+            <field name="name">view.sales.order.auto.done.setting.inherited</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_auto_done_setting"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_done']" position="attributes">
+                    <attribute name="groups">sale_order_lock_with_access_right.group_sale_order_lock_unlock</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_unlock']" position="attributes">
+                    <attribute name="groups">sale_order_lock_with_access_right.group_sale_order_lock_unlock</attribute>
+                </xpath>
+            </field>
+        </record>
+
+</odoo>
