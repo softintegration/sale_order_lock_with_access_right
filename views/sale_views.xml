@@ -12,6 +12,12 @@
                 <xpath expr="//button[@name='action_unlock']" position="attributes">
                     <attribute name="groups">sale_order_lock_with_access_right.group_sale_order_lock_unlock</attribute>
                 </xpath>
+                <xpath expr="//button[@name='action_confirm'][1]" position="attributes">
+                    <attribute name="context">{'force_confirm':True}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_confirm'][2]" position="attributes">
+                    <attribute name="context">{'force_confirm':True}</attribute>
+                </xpath>
             </field>
         </record>
 
